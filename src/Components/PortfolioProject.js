@@ -56,7 +56,7 @@ export default class classComponent extends Component {
 
             </div>
             <div className="row" id="projects"><h1>Projects</h1>{projectLists}
-                <Form /></div>
+            </div>
         </div>;
     }
 }
