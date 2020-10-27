@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+
 
 function App() {
+
+  const formStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '40px'
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <form style={formStyle} name="contact" action="/contact" method="POST" data-netlify="true" >
+
+
+        <input type="hidden" name="form-name" value="contact" />
+        <input required type="text" name="name" placeholder="Enter Name" />
+        <input required type="email" name="email" placeholder="email" />
+        <textarea required id="message" name="message" placeholder="message" />
+        <button type="submit" id="submit"  >Submit</button>
+      </form>
+
+
     </div>
   );
 }
